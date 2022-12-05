@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@500&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #01AFC6;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+main {
+  height: 100vh;
+  display: grid;
+  grid-template: 65px 1fr/repeat(2, 1fr);
+}
+main img {
+  grid-row: 1/3;
+  width: 100%;
+  height: 100%;
+}
+main h1 {
+  font-family: "IBM Plex Sans JP", sans-serif;
+  color: #FFF;
+  grid-row: 1/2;
+  grid-column: 2/3;
+  text-align: center;
+  font-size: 5rem;
+}
+main ul {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  height: 80%;
+  width: 80%;
+  grid-row: 2/3;
+  grid-column: 2/3;
+  display: grid;
+  grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+  place-items: center;
+}
+main ul li img {
+  height: 6.4rem;
+  width: 6.4rem;
+  margin-bottom: 0.5rem;
+}
+main ul li a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #FFF;
+  place-items: center;
+}
+main ul li p {
+  font-size: 3rem;
+  text-transform: uppercase;
+}/*# sourceMappingURL=style.css.map */
