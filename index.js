@@ -1,0 +1,1 @@
+const setaRetorno = document.querySelector('.setaRetorno');

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Chakma&display=swap");
 *,
 *::after,
 *::before {
@@ -16,17 +17,17 @@ html {
   font-size: 62.5%;
 }
 
-main {
+#mainMenu {
   height: 100vh;
   display: grid;
   grid-template: 65px 1fr/repeat(2, 1fr);
 }
-main img {
+#mainMenu img {
   grid-row: 1/3;
   width: 100%;
   height: 100%;
 }
-main h1 {
+#mainMenu h1 {
   font-family: "IBM Plex Sans JP", sans-serif;
   color: #FFF;
   grid-row: 1/2;
@@ -34,7 +35,7 @@ main h1 {
   text-align: center;
   font-size: 5rem;
 }
-main ul {
+#mainMenu ul {
   position: relative;
   top: 50%;
   left: 50%;
@@ -48,19 +49,196 @@ main ul {
   grid-template: repeat(3, 1fr)/repeat(2, 1fr);
   place-items: center;
 }
-main ul li img {
+#mainMenu ul li img {
   height: 6.4rem;
   width: 6.4rem;
   margin-bottom: 0.5rem;
 }
-main ul li a {
+#mainMenu ul li a {
   display: flex;
   flex-direction: column;
   text-decoration: none;
   color: #FFF;
   place-items: center;
 }
-main ul li p {
+#mainMenu ul li p {
   font-size: 3rem;
+  text-transform: uppercase;
+}
+
+@-webkit-keyframes seta {
+  0% {
+    left: 0.5%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes seta {
+  0% {
+    left: 0.5%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+.menuLateral {
+  position: fixed;
+  top: 50%;
+  left: 100%;
+  transform: translate(-100%, -50%);
+  width: 22rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #F2E205;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  z-index: 999;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  border-top-left-radius: 0.2rem;
+  border-bottom-left-radius: 0.2rem;
+  color: #343a40;
+}
+.menuLateral h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+}
+.menuLateral ul {
+  text-align: center;
+  list-style: none;
+}
+.menuLateral ul li {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.menuLateral .setaMenuLateral {
+  width: 3rem;
+  height: 5rem;
+  background-color: #F2E205;
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: translate(-100%, -50%);
+  border-top-left-radius: 0.2rem;
+  border-bottom-left-radius: 0.2rem;
+}
+.menuLateral .setaMenuLateral img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.2rem;
+  width: 100%;
+}
+.menuLateral .setaDeTrocaDeMenu {
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: center;
+  width: 9rem;
+  height: 3rem;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.menuLateral .setaDeTrocaDeMenu .setaEsquerda {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+.menuLateral .setaDeTrocaDeMenu .setaEsquerda img {
+  position: relative;
+  padding: 0.2rem;
+  left: 50%;
+  width: 100%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.menuLateral .setaDeTrocaDeMenu .numeroDaPaginaAtual {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: #FFF;
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 0.5rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.menuLateral .setaDeTrocaDeMenu .setaDireita {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+.menuLateral .setaDeTrocaDeMenu .setaDireita img {
+  position: relative;
+  padding: 0.2rem;
+  left: 50%;
+  width: 100%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.setaRetorno {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 9.6rem;
+  height: 9.6rem;
+  background-image: url("../img/setaRetorno.png");
+  -webkit-animation: seta 1s infinite;
+          animation: seta 1s infinite;
+}
+
+.flexTituloD {
+  margin-top: 1rem;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  place-items: center;
+}
+.flexTituloD img {
+  width: 5rem;
+  height: 5rem;
+  margin-right: 1rem;
+}
+.flexTituloD a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 5rem;
+  color: #F2E205;
+}
+
+.corpoDocumentacao {
+  position: relative;
+  top: 10.5rem;
+  width: 96%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.corpoDocumentacao .descricaoInicial {
+  font-size: 2.3rem;
+  color: #FFF;
+  font-family: "Noto Sans Chakma", sans-serif;
+}
+.corpoDocumentacao .hrDocumentacao {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #F2E205;
+}
+
+.tituloSecaoReact {
+  font-size: 3.5rem;
+  color: #F2E205;
+  text-align: center;
   text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */
