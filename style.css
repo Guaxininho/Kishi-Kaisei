@@ -241,4 +241,79 @@ html {
   color: #F2E205;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.listaSecaoReact {
+  margin-left: 2rem;
+}
+.listaSecaoReact li {
+  list-style: square;
+  font-size: 2.5rem;
+  color: #FFF;
+  margin-bottom: 1rem;
+}
+.listaSecaoReact li::first-letter {
+  text-transform: uppercase;
+}
+
+.codigo {
+  margin-top: 0.5rem;
+  background-color: #343a40;
+  text-align: justify;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  height: content;
+  width: 100%;
+  border-radius: 0.2rem;
+}
+.codigo code {
+  color: #FFF;
+  font-size: 1.5rem;
+}
+
+.copiar {
+  position: absolute;
+  left: 100%;
+  transform: translateX(-100%);
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+  padding: 0.2rem;
+}
+.copiar:hover {
+  padding: 0rem;
+}
+.copiar:active {
+  padding: 0.2rem;
+}
+.copiar img {
+  width: 80%;
+  height: 80%;
+}
+
+.hidden {
+  display: none;
+}
+
+.botaoShow {
+  font-size: 1.5rem;
+  height: 2.5rem;
+  padding: 0.2rem 1rem 0.2rem 1rem;
+}
+
+.show {
+  display: block;
+  background-color: #b1fb12;
+  margin-top: 0.5rem;
+  text-align: justify;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  width: 100%;
+  border-radius: 0.2rem;
+  color: #343a40;
+  font-size: 2rem;
+}
+.show::first-letter {
+  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */

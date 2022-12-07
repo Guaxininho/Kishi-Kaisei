@@ -165,5 +165,77 @@ a {
   color: #F2E205;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 1.5rem;
   // letter-spacing: .3rem;
 }
+.listaSecaoReact{
+  margin-left: 2rem;
+  li{
+    list-style: square;
+    font-size: 2.5rem;
+    color: #FFF;
+    margin-bottom: 1rem;
+    &::first-letter{
+      text-transform: uppercase;
+    }
+  }
+}
+.codigo{
+    margin-top: .5rem;
+    background-color: #343a40;
+    text-align: justify;
+    padding: .5rem 1rem .5rem 1rem;
+    height: content;
+    width: 100%;
+    border-radius: .2rem;
+    code{
+      // background-color: #b1fb12;
+      color: #FFF;
+      font-size: 1.5rem;
+
+    }
+  }
+  .copiar{
+    position: absolute;
+    left: 100%;
+    transform: translateX(-100%);
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #00000000;
+    border: none;
+    cursor: pointer;
+    padding: .2rem;
+    &:hover{
+      padding: 0rem;
+    }
+    &:active{
+      padding: .2rem;
+    }
+    img{
+      width: 80%;
+      height: 80%;
+    }
+  }
+  .hidden{
+    display: none;
+  }
+  .botaoShow{
+    font-size: 1.5rem;
+    // width: 2.5rem;
+    height: 2.5rem;
+    padding: .2rem 1rem .2rem 1rem;
+  }
+  .show{
+    display: block;
+    background-color: #b1fb12;
+    margin-top: .5rem;
+    text-align: justify;
+    padding: .5rem 1rem .5rem 1rem;
+    width: 100%;
+    border-radius: .2rem;
+    color: #343a40;
+    font-size: 2rem;
+    &::first-letter{
+      text-transform: uppercase;
+    }
+  }
