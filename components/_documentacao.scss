@@ -220,12 +220,20 @@ a {
     display: none;
   }
   .botaoShow{
+    background-color: #FFF;
+    color: #343a40;
     font-size: 1.5rem;
-    // width: 2.5rem;
     height: 2.5rem;
     padding: .2rem 1rem .2rem 1rem;
+    border-radius: .4rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  .ativo{
+    background-color: #b1fb12;
+    color: #343a40;
   }
   .show{
+    transition: all 1s;
     display: block;
     background-color: #b1fb12;
     margin-top: .5rem;

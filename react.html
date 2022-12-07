@@ -34,8 +34,8 @@
   <h1 class="tituloSecaoReact">ESTRUTURA</h1>
   <ul class="listaSecaoReact">
     <li><b>node_modules:</b> é onde ficam as dependências do projeto 
-      <button class="botaoShow">Detalhes</button>
-      <div class="show">não deve ser enviada pro github, porque você pode conseguir ela usando o npm install que vai ler o package.json e instalar o que precisa.</div>
+      <button class="botaoShow">Ver detalhes</button>
+      <div class="conteudo hidden">não deve ser enviada pro github, porque você pode conseguir ela usando o npm install que vai ler o package.json e instalar o que precisa.</div>
     </li>
     <li><b>public:</b> é onde o index.html fica</li>
     <li><b>src:</b> é onde fica o código do projeto</li>
@@ -47,12 +47,12 @@
     <li>para o react entender que é um componente, a função deve ter nome maiúsculo e retornar um JSX</li>
     <li>no react é obrigatório fechar a tag
       <div class="caixaCodigo">
-      <button class="copiar"><img src="./img/icons/copy.png"></button>
+      <button class="copiar"><img class="imgCopiar" src="./img/icons/copy.png"></button>
       <pre class="codigo"><code>&lt;h1&gt;&lt;/h1&gt;</code></pre>
       </div>
       mas normalmente vemos a tag de fechamento omitida
       <div class="caixaCodigo">
-      <button class="copiar"><img src="./img/icons/copy.png"></button>
+      <button class="copiar"><img class="imgCopiar" src="./img/icons/copy.png"></button>
       <pre class="codigo"><code>&lt;h1/&gt;</code></pre>
       </div>
       isso incui tudo que no html não era fechado, como as tags img, input, br e etc. No React, TUDO, literalmente tudo tem que ser fechado.
@@ -60,19 +60,19 @@
     <li>JSX sempre deve retornar apenas um elemento, então se for mais de um elemento deve estar encapsulado em apenas um</li>
     <li>Para usar javascript dentro do JSX, usa-se chaves
       <div class="caixaCodigo">
-      <button class="copiar"><img src="./img/icons/copy.png"></button>
+      <button class="copiar"><img class="imgCopiar" src="./img/icons/copy.png"></button>
       <pre class="codigo"><code>&lt;h1&gt;{1 + 1}&lt;/h1&gt;</code></pre>
       </div>
     </li>
     <li>Para usar eventos no JSX, usa-se o camelCase
       <div class="caixaCodigo">
-      <button class="copiar"><img src="./img/icons/copy.png"></button>
+      <button class="copiar"><img class="imgCopiar" src="./img/icons/copy.png"></button>
       <pre class="codigo"><code>&lt;button onClick={funcao}&gt;Clique&lt;/button&gt;</code></pre>
       </div>
     </li>
-    <li>Para usar atributos (classes pra css e dommanipulation) no JSX, usa-se o camelCase
+    <li>Para usar atributos (classes para CSS e DOM manipulation) no JSX, usa-se o camelCase e nome não é class, mas className
       <div class="caixaCodigo">
-      <button class="copiar"><img src="./img/icons/copy.png"></button>
+      <button class="copiar"><img class="imgCopiar" src="./img/icons/copy.png"></button>
       <pre class="codigo"><code>&lt;button className="botao"&gt;Clique&lt;/button&gt;</code></pre>
       </div>
     </li>
@@ -84,31 +84,31 @@
   <ul class="listaSecaoReact">
     <li>escolha o diretório pelo terminal e use o comando
       <div class="caixaCodigo">
-      <button class="copiar"><img src="./img/icons/copy.png"></button>
+      <button class="copiar"><img class="imgCopiar" src="./img/icons/copy.png"></button>
       <pre class="codigo"><code>npx create-react-app nomedoprojeto</code></pre>
       </div> este comando vai criar o projeto do zero
     </li>
     <li>mude para a pasta do projeto após a criação e use o comando 
       <div class="caixaCodigo">
-      <button class="copiar"><img src="./img/icons/copy.png"></button>
+      <button class="copiar"><img class="imgCopiar" src="./img/icons/copy.png"></button>
       <pre class="codigo"><code>code . </code></pre>
       </div> para abrir o projeto no vscode e em seguida o comando
       <div class="caixaCodigo">
-      <button class="copiar"><img src="./img/icons/copy.png"></button>
+      <button class="copiar"><img class="imgCopiar" src="./img/icons/copy.png"></button>
       <pre class="codigo"><code>npm start</code></pre>
       </div> para iniciar o server</li>
     <li>deletar dentro da pasta src: app.css, app.js, app.test.js, index.css, logo.svg, serviceWorker.js, setupTests.js</li>
     <li>limpar tudo do arquivo index.js</li>
     <li>dentro do index.js começar importando o ES6 modules e o DOM virtual usando: 
       <div class="caixaCodigo">
-      <button class="copiar"><img src="./img/icons/copy.png"></button>
+      <button class="copiar"><img class="imgCopiar" src="./img/icons/copy.png"></button>
       <pre class="codigo"><code>import React from 'react'; // importa o ES6
 import ReactDOM from 'react-dom'; // importa o DOM virtual</code></pre>
       </div>
     </li>
-    <li>Agora crie o componente raíz <button class="botaoShow">Detalhes</button><div class="show">Lembre-se de criar o componente com letra maiúscula, é uma das regras. Fora isso invés de uma div é possível usar algo mais semântico, ou um react.fragment, que também pode ser representado por <>. Outro detalhe é que o HTML que fica dentro na verdade é JSX, e isso é só uma sintaxe sugar, porque por trás dos panos o react está usando javascript para criar os elementos, e a cada elemento criado, é aberto um novo objeto, que vai aninhando aos objetos anteriores e vira um caos. Sobre o () do return, é necessário caso queira retornar mais de uma linha.</div>
+    <li>Agora crie o componente raíz <button class="botaoShow">Ver detalhes</button><div class="conteudo hidden">Lembre-se de criar o componente com letra maiúscula, é uma das regras. Fora isso invés de uma div é possível usar algo mais semântico, ou um react.fragment, que também pode ser representado por <>. Outro detalhe é que o HTML que fica dentro na verdade é JSX, e isso é só uma sintaxe sugar, porque por trás dos panos o react está usando javascript para criar os elementos, e a cada elemento criado, é aberto um novo objeto, que vai aninhando aos objetos anteriores e vira um caos. Sobre o () do return, é necessário caso queira retornar mais de uma linha.</div>
       <div class="caixaCodigo">
-      <button class="copiar"><img src="./img/icons/copy.png"></button>
+      <button class="copiar"><img class="imgCopiar" src="./img/icons/copy.png"></button>
       <pre class="codigo"><code>function App(){
   return(
     &lt;div&gt;
@@ -116,9 +116,9 @@ import ReactDOM from 'react-dom'; // importa o DOM virtual</code></pre>
     &lt;/div&gt;
 )}</code></pre>    
     </li>
-    <li>e renderize ele usando o método render() do DOM virtual <button class="botaoShow">Detalhes</button><div class="show">aqui temos 2 parâmetros, o primeiro é o componente que queremos renderizar e o segundo é onde queremos renderizar. Este lugar 'root', é uma id que fica lá no index.html da pasta public, no fim das contas tudo é renderizado ali.</div>
+    <li>e renderize ele usando o método render() do DOM virtual <button class="botaoShow">Ver detalhes</button><div class="conteudo hidden">aqui temos 2 parâmetros, o primeiro é o componente que queremos renderizar e o segundo é onde queremos renderizar. Este lugar 'root', é uma id que fica lá no index.html da pasta public, no fim das contas tudo é renderizado ali.</div>
       <div class="caixaCodigo">
-      <button class="copiar"><img src="./img/icons/copy.png"></button>
+      <button class="copiar"><img class="imgCopiar" src="./img/icons/copy.png"></button>
       <pre class="codigo"><code>ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</code></pre>
     </li>
   </ul>
