@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Chakma&display=swap');
 
-
 @keyframes seta {
   0% {
     left: .5%;
@@ -9,12 +8,44 @@
     left: 0%;
   }
 }
+@keyframes movimentoSeta{
+  0%{
+    rotate: 0deg;
+  }
+  100%{
+    rotate: 180deg;
+  }
+}
+@keyframes movimentoSeta2{
+  0%{
+    rotate: 180deg;
+  }
+  100%{
+    rotate: 0deg;
+  }
+}
+@keyframes guardandoCaixa {
+  0% {
+    transform: translate(-100%, -50%);
+  }
+  100%{
+    transform: translate(0%, -50%);
+  }
+}
+@keyframes aparecendoCaixa {
+  0% {
+    transform: translate(0%, -50%);
+  }
+  100%{
+    transform: translate(-100%, -50%);
+  }
+}
 
-.menuLateral{
+#menuLateralReact{
   position: fixed;
   top: 50%;
   left: 100%;
-  transform: translate(-100%, -50%);
+  transform: translate(0%, -50%);
   width: 22rem;
   height: fit-content;
   background-color: #F2E205;
@@ -25,6 +56,10 @@
   border-top-left-radius: .2rem;
   border-bottom-left-radius: .2rem;
   color: #343a40;
+  animation-name: aparecendoCaixa;
+  animation-duration: 1s;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
   h1{
     font-size: 2rem;
     text-transform: uppercase;
@@ -42,6 +77,10 @@
       text-transform: uppercase;
       font-size: 1.5rem;
       margin-bottom: 1rem;
+      a{
+        text-decoration: none;
+        color: #343a40;
+      }
     }
   }
   .setaMenuLateral{
@@ -54,12 +93,17 @@
     transform: translate(-100%, -50%);
     border-top-left-radius: .2rem;
     border-bottom-left-radius: .2rem;
-    img{
+    #setaIMG{
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       padding: .2rem;
       width: 100%;
+      animation-name: movimentoSeta2;
+      animation-duration: 1s;
+      transform-origin: top;
+      animation-play-state: paused;
+      animation-fill-mode: forwards;
     }
   }
   .setaDeTrocaDeMenu{

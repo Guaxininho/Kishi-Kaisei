@@ -10,18 +10,17 @@
 <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-<nav class="menuLateral hidden">
+<nav id="menuLateralReact" class="fechada">
   <h1>índice</h1>
   <ul class="primeiraLista">
-    <li>iniciando o projeto</li>
-    <li>criando componente</li>
+
   </ul>
   <div class="setaDeTrocaDeMenu">
     <figure class="setaEsquerda"><img src="./img/icons/setaEsquerda.png" alt=""></figure>
     <div class="numeroDaPaginaAtual">1</div>
     <figure class="setaDireita"><img src="./img/icons/setaDireita.png" alt=""></figure>
   </div>
-  <div class="setaMenuLateral"><img src="./img/icons/setamenu.png" alt=""></div>
+  <div class="setaMenuLateral"><img id="setaIMG" src="./img/icons/setamenu.png" alt=""></div>
 </nav>
 <a href="index.html"><figure class="setaRetorno"></figure></a>
 <div class="flexTituloD">
@@ -31,7 +30,7 @@
 <main class="corpoDocumentacao">
   <p class="descricaoInicial">React é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web. É mantida pelo Facebook. É usada no Facebook para produtos como Instagram, Messenger, Whatsapp Web, Workplace e Oculus VR. Além do Facebook, outras empresas como Netflix, Airbnb, SeatGeek, HelloSign, Walmart, Imgur, Feedly, Lyft, Tinder e Atlassian usam React. O React pode ser usado como base na criação de single-page ou mobile applications.</p>
   <hr class="hrDocumentacao">
-  <h1 class="tituloSecaoReact">ESTRUTURA</h1>
+  <h1 class="tituloSecaoReact" id="estruturaTitulo">ESTRUTURA</h1>
   <ul class="listaSecaoReact">
     <li><b>node_modules:</b> é onde ficam as dependências do projeto 
       <button class="botaoShow">Ver detalhes</button>
@@ -41,7 +40,7 @@
     <li><b>src:</b> é onde fica o código do projeto</li>
   </ul>
   <hr class="hrDocumentacao">
-  <h1 class="tituloSecaoReact">REGRAS</h1>
+  <h1 class="tituloSecaoReact" id="regrasTitulo">REGRAS</h1>
 
   <ul class="listaSecaoReact">
     <li>para o react entender que é um componente, a função deve ter nome maiúsculo e retornar um JSX</li>
@@ -79,7 +78,7 @@
   </ul>
 
   <hr class="hrDocumentacao">
-  <h1 class="tituloSecaoReact">iniciando o projeto</h1>
+  <h1 class="tituloSecaoReact" id="iniciandoTitulo">iniciando o projeto</h1>
 
   <ul class="listaSecaoReact">
     <li>escolha o diretório pelo terminal e use o comando
