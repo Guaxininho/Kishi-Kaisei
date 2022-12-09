@@ -121,6 +121,18 @@ import ReactDOM from 'react-dom'; // importa o DOM virtual</code></pre>
       <pre class="codigo"><code>ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</code></pre>
     </li>
   </ul>
+
+  <hr class="hrDocumentacao">
+  <h1 class="tituloSecaoReact" id="Css">css no react</h1>
+  <ul class="listaSecaoReact">
+    <li>Para entrar no javascript precisamos usar {} no JSX, então, quando se trata de passar propriedades em javascript para um css inline, visto que é um objeto do javascript também precisamos das chaves do objeto {}, então fica {{}}. 
+      <pre class="codigo">
+        <!-- <code>style={{color: 'red'}</code> -->
+      </pre>
+      O background-color não funciona, pois é uma propriedade do css, e não do js. Então, para usar o background-color, precisamos usar o camel case, backgroundColor. Inline css é mais forte que o css externo, então, se tivermos um background-color no css externo, e um backgroundColor no inline css, o backgroundColor vai prevalecer. Usando livrarias externas é normal vir inline, então é importante saber isso.
+  </ul>
+
+
 </main>
 
 
