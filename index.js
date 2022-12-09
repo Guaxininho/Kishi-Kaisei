@@ -9,6 +9,8 @@ const caixa = document.querySelector('#menuLateralReact');
 const titulos = document.querySelectorAll('.tituloSecaoReact');
 const ulDoIndice = document.querySelector('.primeiraLista');
 const setaMenuLateral = document.querySelector('.setaMenuLateral');
+const imutavel = document.querySelector('.imutavel');
+const imutavel2 = document.querySelector('.imutavel2');
 
 // FUNÇÃO PARA O BOTÃO DETALHES ABRIR E FECHAR O CONTEÚDO
 for (let i = 0; i < botaoDetalhes.length; i++) {
@@ -76,3 +78,5 @@ setaMenuLateral.addEventListener('click', ()=> {
 // ABRINDO E FECHANDO A CAIXA DE ÍNDICE AO CLICAR EM SETA
 
 // transform: translate(-100%, -50%);
+imutavel.innerText = `style={{color: 'red'}};`
+imutavel2.innerText = `style={{backgroundColor = 'red'}};`

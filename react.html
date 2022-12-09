@@ -123,14 +123,68 @@ import ReactDOM from 'react-dom'; // importa o DOM virtual</code></pre>
   </ul>
 
   <hr class="hrDocumentacao">
+  <h1 class="tituloSecaoReact" id="componentes">componentes</h1>
+  <ul class="listaSecaoReact">
+    <li>No componente é possível definir variáveis fora e dentro do componente, mas se for definida dentro, só pode ser usada dentro do componente, e se for definida fora, pode ser usada em qualquer lugar do componente. Variáveis definidas fora do componente são globais, e variáveis definidas dentro do componente são locais.
+      <div class="caixaCodigo">
+      <button class="copiar"><img class="imgCopiar" src="./img/icons/copy.png"></button>
+      <pre class="codigo"><code>const nomeUm = 'João'; // variável global
+function App(){
+  const nome = 'Maria'; // variável local do componente
+  return(
+    &lt;div&gt;
+    &lt;h1&gt;Hello {nome}&lt;/h1&gt; // vai sair HELLO MARIA
+    &lt;h1&gt;Hello {nomeUm}&lt;/h1&gt; // vai sair HELLO JOAO
+    &lt;/div&gt;
+)}</code></pre>
+Variáveis definidas dentro do componente só podem ser usadas dentro do componente, e variáveis definidas fora do componente podem ser usadas em qualquer lugar do componente. Lembrando que sempre é preciso retornar um valor dentro do javascript usado no componente, não é possível retornar uma definição de variável por exemplo. Se for preciso retornar uma variável, é preciso retornar o valor dela.</li>
+  </ul>
+
+
+  <hr class="hrDocumentacao">
+  <h1 class="tituloSecaoReact" id="props">Props</h1>
+  <ul class="listaSecaoReact">
+    <li>props é passado como parâmetro da função do componente, e é um objeto. Para acessar as propriedades do objeto, exemplo:
+      <div class="caixaCodigo">
+      <button class="copiar"><img class="imgCopiar" src="./img/icons/copy.png"></button>
+      <pre class="codigo"><code>function App(props){
+  return(
+    &lt;div&gt;
+    &lt;h1&gt;Hello {props.nome}&lt;/h1&gt; // vai sair Hello Maria
+    &lt;/div&gt;
+)}</code></pre>
+      Então quando passamos no componente a propriedade nome, é criado um objeto props, e dentro dele a chave nome e o valor que passamos, exemplo:
+      <div class="caixaCodigo">
+      <button class="copiar"><img class="imgCopiar" src="./img/icons/copy.png"></button>
+      <pre class="codigo"><code>&lt;App nome="Maria" /&gt;</code></pre>
+    Dessa forma, maria vai se encaixar onde falamos no componente que entraria props.nome e vai sair Hello Maria. E claro, podemos passar outras propriedades, mas se não estiver montado no componente props.propriedade, então nada será renderizado.
+    </li>
+    <li>Além da props, existe a props.children. A propChildren é tudo que renderiza entre a abertura e fechamento do componente, não são as propriedades, mas o que realmente vem dentro do componente. Exemplo:
+      <div class="caixaCodigo">
+      <button class="copiar"><img class="imgCopiar" src="./img/icons/copy.png"></button>
+      <pre class="codigo"><code>&lt;App&gt;Samuel&lt;/App&gt;</code></pre>
+      E no componente:
+      <div class="caixaCodigo">
+      <button class="copiar"><img class="imgCopiar" src="./img/icons/copy.png"></button>
+      <pre class="codigo"><code>function App(props){
+  return(
+    &lt;div&gt;
+    &lt;h1&gt;Hello {props.children}&lt;/h1&gt; // vai sair Hello Samuel
+    &lt;/div&gt;
+)}</code></pre>
+    </li>
+  </ul>
+
+  <hr class="hrDocumentacao">
   <h1 class="tituloSecaoReact" id="Css">css no react</h1>
   <ul class="listaSecaoReact">
-    <li>Para entrar no javascript precisamos usar {} no JSX, então, quando se trata de passar propriedades em javascript para um css inline, visto que é um objeto do javascript também precisamos das chaves do objeto {}, então fica {{}}. 
-      <pre class="codigo">
-        <!-- <code>style={{color: 'red'}</code> -->
-      </pre>
-      O background-color não funciona, pois é uma propriedade do css, e não do js. Então, para usar o background-color, precisamos usar o camel case, backgroundColor. Inline css é mais forte que o css externo, então, se tivermos um background-color no css externo, e um backgroundColor no inline css, o backgroundColor vai prevalecer. Usando livrarias externas é normal vir inline, então é importante saber isso.
+    <li>Para entrar no javascript precisamos usar {} no JSX, então, quando se trata de passar propriedades em javascript para um css inline, visto que é um objeto do javascript também precisamos das chaves do objeto {}, então fica {{}}, como no exemplo a seguir:
+      <pre class="codigo"><code class="imutavel"></code></pre>
+      Já o background-color não funciona com este nome, pois é uma propriedade do css, e não do js. Então, para usar o background-color inline, precisamos usar o camel case, backgroundColor como chave, e a cor como valor já que é um objeto. 
+      <pre class="codigo"><code class="imutavel2"></code></pre>
+      É importante ressaltar também que inline css é mais forte que o css externo, então, se tivermos um background-color no css externo, e um backgroundColor no inline css, o backgroundColor vai prevalecer. Usando livrarias externas é normal vir inline, então é importante saber isso.
   </ul>
+
 
 
 </main>
